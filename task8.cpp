@@ -30,6 +30,38 @@ int findOccurrenceOfString(string str, string key){
 }
 
 int main(){
-    // test cases to be implemented
+    string text = "Hello world, welcome to the world of C++";
+    int index;
+
+    // Test Case 1: Pattern at the beginning
+    cout << " Test Case 1: Pattern at the beginning " << endl;
+    string key1 = "Hello";
+    index = findOccurrenceOfString(text, key1);
+    if (index != -1) {
+        cout << "Pattern '" << key1 << "' found at index: " << index << endl;
+    }
+
+
+    // Test Case 2: Pattern at the end
+    cout << " Test Case 2: Pattern at the end " << endl;
+    string key2 = "C++";
+    index = findOccurrenceOfString(text, key2);
+    if (index != -1) {
+        cout << "Pattern '" << key2 << "' found at index: " << index << endl;
+    }
+
+    // Test Case 3: Pattern not present
+    cout << " Test Case 3: Pattern not present " << endl;
+    string key3 = "Java";
+    index = findOccurrenceOfString(text, key3);
+    if (index != -1) {
+        cout << "Pattern '" << key3 << "' found at index: " << index << endl;
+    }
+    // Bonus - Test Case 4: Empty pattern
+    cout << " Test Case 4: Empty pattern " << endl;
+    string key4 = "";
+    findOccurrenceOfString(text, key4);
+
+
     return 0;
 }
